@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteCorteDia" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.4641000000000006"/>
+	<property name="ireport.x" value="159"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM CAJA WHERE CORTE_CAJA_HECHO = 0]]>
+	</queryString>
+	<field name="ID" class="java.lang.Long"/>
+	<field name="EFECTIVO_INGRESADO" class="java.lang.Double"/>
+	<field name="CORTE_CAJA_HECHO" class="java.lang.Long"/>
+	<field name="FECHA_CORTE" class="java.sql.Date"/>
+	<field name="HORA_CORTE" class="java.sql.Time"/>
+	<field name="EFECTIVO_GASTADO" class="java.lang.Double"/>
+	<field name="EFECTIVO_HAB" class="java.lang.Double"/>
+	<field name="EFECTIVO_TOTAL" class="java.lang.Double"/>
+	<field name="FECHA_ING_EFECTIVO" class="java.sql.Date"/>
+	<field name="HORA_ING_EFECTIVO" class="java.sql.Time"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="2" width="555" height="25"/>
+				<textElement textAlignment="Center">
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE CORTE AL DÍA - TOTALES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="24">
+			<staticText>
+				<reportElement x="20" y="3" width="163" height="16"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de ingreso del efectivo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="183" y="3" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{FECHA_ING_EFECTIVO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="141" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="58" width="222" height="16"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Efetivo ingresado por Habitaciones:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="6" width="555" height="16"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTALES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="32" width="222" height="16"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Efetivo ingresado al inicio del turno:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="20" y="84" width="222" height="16"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Efectivo retirado por gastos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="110" width="222" height="16"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL EN CAJA:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="438" y="32" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EFECTIVO_INGRESADO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="438" y="58" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EFECTIVO_HAB}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="438" y="84" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EFECTIVO_GASTADO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="438" y="110" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{EFECTIVO_TOTAL}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="438" y="109" width="100" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="417" y="58" width="21" height="16"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="84" width="21" height="16"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="110" width="21" height="16"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[=]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="494" y="3" width="50" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="449" y="3" width="45" height="16"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Página:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1"/>
+			</line>
+		</band>
+	</pageFooter>
+</jasperReport>

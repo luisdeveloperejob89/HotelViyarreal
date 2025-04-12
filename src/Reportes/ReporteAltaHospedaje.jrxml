@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Java" printOrder="Horizontal" pageWidth="396" pageHeight="612" whenNoDataType="AllSectionsNoDetail" columnWidth="368" leftMargin="14" rightMargin="14" topMargin="15" bottomMargin="16">
+	<property name="ireport.zoom" value="2.9282000000000044"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="569"/>
+	<parameter name="FECHA_ENTRADA" class="java.lang.String"/>
+	<parameter name="FECHA_SALIDA" class="java.lang.String"/>
+	<parameter name="NOMBRE" class="java.lang.String"/>
+	<parameter name="DIRECCION" class="java.lang.String"/>
+	<parameter name="TELEFONO" class="java.lang.String"/>
+	<parameter name="PROCEDENCIA" class="java.lang.String"/>
+	<parameter name="NACIONALIDAD" class="java.lang.String"/>
+	<parameter name="RFC" class="java.lang.String"/>
+	<parameter name="HABITACION" class="java.lang.String"/>
+	<parameter name="ID" class="java.lang.Integer"/>
+	<parameter name="USUARIO" class="java.lang.String"/>
+	<parameter name="HORA_ACTUAL" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT R.*, CONCAT(C.NOMBRE, ' ', C.AP_PATERNO, ' ', C.AP_MATERNO) AS NOMBRE, C.DIRECCION, C.PROCEDENCIA, C.TELEFONO, C.PROCEDENCIA,C.RFC FROM HOSPEDAJES R LEFT JOIN  HUESPEDES C ON R.HUESPED = C.ID
+WHERE R.ID = $P{ID}]]>
+	</queryString>
+	<field name="ID" class="java.math.BigInteger"/>
+	<field name="HUESPED" class="java.math.BigInteger"/>
+	<field name="HABITACION" class="java.math.BigInteger"/>
+	<field name="DIAS" class="java.lang.Long"/>
+	<field name="FORMA_PAGO" class="java.lang.Long"/>
+	<field name="TOT_ADULTOS" class="java.lang.Long"/>
+	<field name="TOT_NINIOS" class="java.lang.Long"/>
+	<field name="TOT_OCUPANTES" class="java.lang.Long"/>
+	<field name="ABONO" class="java.lang.Long"/>
+	<field name="F_ENTRADA" class="java.sql.Timestamp"/>
+	<field name="F_SALIDA" class="java.sql.Timestamp"/>
+	<field name="MES" class="java.lang.Long"/>
+	<field name="ANIO" class="java.lang.Long"/>
+	<field name="TOTAL" class="java.lang.Double"/>
+	<field name="OBSERVACIONES" class="java.lang.String"/>
+	<field name="TOTAL_ABONO" class="java.lang.Double"/>
+	<field name="NOMBRE" class="java.lang.String"/>
+	<field name="DIRECCION" class="java.lang.String"/>
+	<field name="PROCEDENCIA" class="java.lang.String"/>
+	<field name="TELEFONO" class="java.lang.String"/>
+	<field name="RFC" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="67" splitType="Stretch">
+			<image scaleImage="FillFrame" hAlign="Center" isUsingCache="false">
+				<reportElement x="8" y="3" width="74" height="51"/>
+				<imageExpression><![CDATA["C:\\HOTEL\\Reportes\\Imagenes\\LogoHotel.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement mode="Transparent" x="95" y="54" width="74" height="10"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Encargado de turno:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="95" y="0" width="145" height="16"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tel: 01 (997) 972-28-28]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="95" y="16" width="145" height="16"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Calle 23 # 207 x 26-A y 28]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="95" y="32" width="145" height="16"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CP 97860 Ticul, Yucatán]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="170" y="54" width="71" height="10"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{USUARIO}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="272" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="2" y="2" width="60" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha entrada:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="90" y="2" width="54" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha salida:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="2" y="82" width="52" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="2" y="160" width="52" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="2" y="107" width="52" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Procedencia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="202" y="82" width="60" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nacionalidad:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="2" y="132" width="52" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RFC:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="2" y="57" width="52" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="55" y="57" width="193" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOMBRE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="2" y="15" width="60" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_ENTRADA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="18" width="60" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{FECHA_SALIDA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="82" width="143" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DIRECCION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="160" width="100" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TELEFONO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="107" width="95" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{PROCEDENCIA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="82" width="82" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{NACIONALIDAD}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="55" y="132" width="95" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RFC}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="264" y="107" width="81" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HABITACION}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement mode="Transparent" x="202" y="107" width="60" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Habitación:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="202" y="132" width="60" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="264" y="132" width="79" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOTAL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="186" width="167" height="20"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<text><![CDATA[* Estoy de acuerdo en dejar fuera de responsabilidad a esta empresa por valores u objetos que no sean entregados preciosamente a la administración]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="207" width="167" height="11"/>
+				<textElement>
+					<font fontName="Arial" size="6" isBold="true"/>
+				</textElement>
+				<text><![CDATA[* EL PAGO DE LA RENTA ES POR ADELANTADO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="219" width="167" height="11"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<text><![CDATA[LA HABITACIÓN VENCE A LAS 13:00 HRS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="224" y="2" width="60" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="192" width="84" height="11"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FIRMA DEL CLIENTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="192" width="84" height="11"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RESPONSABLE]]></text>
+			</staticText>
+			<line>
+				<reportElement x="178" y="189" width="84" height="1"/>
+			</line>
+			<line>
+				<reportElement x="279" y="189" width="84" height="1"/>
+			</line>
+			<textField>
+				<reportElement x="224" y="18" width="60" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{HORA_ACTUAL}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToBandHeight" x="0" y="235" width="363" height="1"/>
+				<graphicElement>
+					<pen lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+</jasperReport>

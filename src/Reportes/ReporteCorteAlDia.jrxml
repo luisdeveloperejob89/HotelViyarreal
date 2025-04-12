@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteCorteDia_DetalleHab" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.8181818181818181"/>
+	<property name="ireport.x" value="353"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM HOSPEDAJES WHERE REVISADO = 0]]>
+	</queryString>
+	<field name="ID" class="java.math.BigInteger"/>
+	<field name="HUESPED" class="java.math.BigInteger"/>
+	<field name="HABITACION" class="java.math.BigInteger"/>
+	<field name="DIAS" class="java.lang.Long"/>
+	<field name="FORMA_PAGO" class="java.lang.Long"/>
+	<field name="TOT_ADULTOS" class="java.lang.Long"/>
+	<field name="TOT_NINIOS" class="java.lang.Long"/>
+	<field name="TOT_OCUPANTES" class="java.lang.Long"/>
+	<field name="ABONO" class="java.lang.Long"/>
+	<field name="F_ENTRADA" class="java.sql.Timestamp"/>
+	<field name="F_SALIDA" class="java.sql.Timestamp"/>
+	<field name="MES" class="java.lang.Long"/>
+	<field name="ANIO" class="java.lang.Long"/>
+	<field name="TOTAL" class="java.lang.Double"/>
+	<field name="OBSERVACIONES" class="java.lang.String"/>
+	<field name="TOTAL_ABONO" class="java.lang.Double"/>
+	<field name="ESTADO" class="java.lang.Long"/>
+	<field name="HORA" class="java.sql.Time"/>
+	<field name="CTRL_AIRE" class="java.lang.Long"/>
+	<field name="CTRL_TV" class="java.lang.Long"/>
+	<field name="LLAVE" class="java.lang.Long"/>
+	<field name="FECHA_REGISTRO" class="java.sql.Date"/>
+	<field name="ID_USUARIO" class="java.lang.Long"/>
+	<field name="REVISADO" class="java.lang.Long"/>
+	<variable name="TotalHabitaciones" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{TOTAL}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="55" splitType="Stretch">
+			<staticText>
+				<reportElement x="125" y="22" width="336" height="20"/>
+				<textElement>
+					<font size="15" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relación de ingresos por Habitaciones]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="54" width="555" height="1"/>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="24">
+			<staticText>
+				<reportElement x="13" y="2" width="85" height="16"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Habitación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="2" width="100" height="16"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de registro]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="361" y="2" width="100" height="16"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total Habitación]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="23" width="555" height="1"/>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="13" y="3" width="85" height="15"/>
+				<textElement textAlignment="Left">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HABITACION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="137" y="3" width="100" height="15"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{FECHA_REGISTRO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="361" y="3" width="85" height="15"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{TOTAL}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement x="446" y="3" width="45" height="16"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Página:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="491" y="3" width="50" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="19">
+			<textField>
+				<reportElement x="421" y="1" width="100" height="16"/>
+				<textElement textAlignment="Right">
+					<font isBold="true" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{TotalHabitaciones}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="23" y="1" width="222" height="16"/>
+				<textElement>
+					<font size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Efetivo ingresado por Habitaciones:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="0" width="555" height="1"/>
+			</line>
+		</band>
+	</summary>
+</jasperReport>
