@@ -184,8 +184,7 @@ public class MenuPrincipal extends javax.swing.JFrame
      */
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
-    private void initComponents()
-    {
+    private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jDesktopPane1 = new javax.swing.JDesktopPane();
@@ -230,10 +229,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hotel");
         setName("FrM"); // NOI18N
-        addWindowListener(new java.awt.event.WindowAdapter()
-        {
-            public void windowOpened(java.awt.event.WindowEvent evt)
-            {
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
             }
         });
@@ -275,10 +272,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         btnClientesIzq.setFocusable(false);
         btnClientesIzq.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnClientesIzq.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnClientesIzq.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnClientesIzq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClientesIzqActionPerformed(evt);
             }
         });
@@ -292,10 +287,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         btnHabitacionesIzq.setFocusable(false);
         btnHabitacionesIzq.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnHabitacionesIzq.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnHabitacionesIzq.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnHabitacionesIzq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHabitacionesIzqActionPerformed(evt);
             }
         });
@@ -309,10 +302,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         btnHospedajesIzq.setFocusable(false);
         btnHospedajesIzq.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnHospedajesIzq.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnHospedajesIzq.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnHospedajesIzq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHospedajesIzqActionPerformed(evt);
             }
         });
@@ -326,10 +317,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         btnConferenciasIzq.setFocusable(false);
         btnConferenciasIzq.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnConferenciasIzq.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnConferenciasIzq.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnConferenciasIzq.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConferenciasIzqActionPerformed(evt);
             }
         });
@@ -343,10 +332,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         btnSalirIzquierda.setFocusable(false);
         btnSalirIzquierda.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnSalirIzquierda.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnSalirIzquierda.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnSalirIzquierda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirIzquierdaActionPerformed(evt);
             }
         });
@@ -360,10 +347,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         btnSesion.setFocusable(false);
         btnSesion.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnSesion.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnSesion.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSesionActionPerformed(evt);
             }
         });
@@ -378,10 +363,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         btnIniciarTurno.setFocusable(false);
         btnIniciarTurno.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnIniciarTurno.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnIniciarTurno.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnIniciarTurno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIniciarTurnoActionPerformed(evt);
             }
         });
@@ -396,10 +379,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         btnCerrarTurno.setFocusable(false);
         btnCerrarTurno.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnCerrarTurno.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnCerrarTurno.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        btnCerrarTurno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCerrarTurnoActionPerformed(evt);
             }
         });
@@ -409,10 +390,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         mMenu.setText("Menú");
 
         jMenuItem2.setText("Cerrar todas las ventanas");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem2ActionPerformed(evt);
             }
         });
@@ -420,10 +399,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         mMenu.add(jSeparator2);
 
         jMenuItem1.setText("Salir");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
             }
         });
@@ -434,20 +411,16 @@ public class MenuPrincipal extends javax.swing.JFrame
         mClientes.setText("Clientes");
 
         mCtesAgregar.setText("Agregar huesped");
-        mCtesAgregar.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        mCtesAgregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mCtesAgregarActionPerformed(evt);
             }
         });
         mClientes.add(mCtesAgregar);
 
         mCtesCnsHues.setText("Listar huéspedes");
-        mCtesCnsHues.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        mCtesCnsHues.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mCtesCnsHuesActionPerformed(evt);
             }
         });
@@ -458,10 +431,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         mHabitaciones.setText("Habitaciones");
 
         mHabCns.setText("Consulta de Habitaciones");
-        mHabCns.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        mHabCns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mHabCnsActionPerformed(evt);
             }
         });
@@ -472,6 +443,11 @@ public class MenuPrincipal extends javax.swing.JFrame
         mReservaciones.setText("Reservaciones");
 
         mResAlta.setText("Alta de reservaciones");
+        mResAlta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mResAltaActionPerformed(evt);
+            }
+        });
         mReservaciones.add(mResAlta);
 
         jMenuBar1.add(mReservaciones);
@@ -479,20 +455,16 @@ public class MenuPrincipal extends javax.swing.JFrame
         mRecepcionistas.setText("Recepcionistas");
 
         mRecepAlta.setText("Alta de recepcionistas");
-        mRecepAlta.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        mRecepAlta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mRecepAltaActionPerformed(evt);
             }
         });
         mRecepcionistas.add(mRecepAlta);
 
         mRecepCns.setText("Consulta de recepcionistas");
-        mRecepCns.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        mRecepCns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mRecepCnsActionPerformed(evt);
             }
         });
@@ -507,20 +479,16 @@ public class MenuPrincipal extends javax.swing.JFrame
         mGastos.setText("Gastos");
 
         jMenuItem4.setText("Alta de gastos");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem4ActionPerformed(evt);
             }
         });
         mGastos.add(jMenuItem4);
 
         jMenuItem5.setText("Consulta de gastos");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem5ActionPerformed(evt);
             }
         });
@@ -531,20 +499,16 @@ public class MenuPrincipal extends javax.swing.JFrame
         mEmpresas.setText("Empresas");
 
         mEmpAlta.setText("Agregar empresas para descuentos");
-        mEmpAlta.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        mEmpAlta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mEmpAltaActionPerformed(evt);
             }
         });
         mEmpresas.add(mEmpAlta);
 
         mEmpCns.setText("Listar empresas con descuentos");
-        mEmpCns.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        mEmpCns.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mEmpCnsActionPerformed(evt);
             }
         });
@@ -555,20 +519,16 @@ public class MenuPrincipal extends javax.swing.JFrame
         mConfiguracion.setText("Configuración");
 
         mConfOpc.setText("Opciones del Sistema");
-        mConfOpc.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        mConfOpc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mConfOpcActionPerformed(evt);
             }
         });
         mConfiguracion.add(mConfOpc);
 
         mConfOpcAvan.setText("Opciones avanzadas del Sistema");
-        mConfOpcAvan.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        mConfOpcAvan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 mConfOpcAvanActionPerformed(evt);
             }
         });
@@ -579,10 +539,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         mAyuda.setText("Ayuda");
 
         jMenuItem3.setText("Ayuda del Sistema");
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem3ActionPerformed(evt);
             }
         });
@@ -745,7 +703,8 @@ public class MenuPrincipal extends javax.swing.JFrame
         ufrmDlgLogin frm = null;
         
         HabilitaDeshabilitaTodos(false);
-        frm = new ufrmDlgLogin(this, true);        
+        frm = new ufrmDlgLogin(this, true);            
+        frm.setLocationRelativeTo(null);
         frm.show();
         
         if ( frm.isAceptar() && frm.isLogueado() )
@@ -816,7 +775,7 @@ public class MenuPrincipal extends javax.swing.JFrame
         boolean bOk = false;
         
         FrmDlgEfectivoCaja frm = new FrmDlgEfectivoCaja(this, true);
-        
+        frm.setLocationRelativeTo(null);
         frm.show();
         bOk = frm.isIngresoEfectivo();
         
@@ -892,6 +851,12 @@ public class MenuPrincipal extends javax.swing.JFrame
         // TODO add your handling code here:
         MuestraConsultaGastos();
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void mResAltaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mResAltaActionPerformed
+        // TODO add your handling code here:
+        FrmGenerarReservacion frm = new FrmGenerarReservacion(this, rootPaneCheckingEnabled, WIDTH, rootPaneCheckingEnabled);
+        frm.show();
+    }//GEN-LAST:event_mResAltaActionPerformed
     
     public void MuestraConsultaGastos()
     {
@@ -1003,6 +968,7 @@ public class MenuPrincipal extends javax.swing.JFrame
     {
         FrmDetCliente frm = new FrmDetCliente(null, true);
         
+        frm.setLocationRelativeTo(null);
         frm.show();
     }        
     
@@ -1028,7 +994,7 @@ public class MenuPrincipal extends javax.swing.JFrame
     {
         CnsClientes frmClientes = new CnsClientes();
         
-        jDesktopPane1.add(frmClientes);
+        jDesktopPane1.add(frmClientes);        
         frmClientes.show();        
     }
     /**
